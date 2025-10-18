@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Metro Motors | Quality Used Cars in Your City</title>
+    <meta
+      name="description"
+      content="Metro Motors is your trusted used car dealership offering certified pre-owned vehicles, flexible financing, and unbeatable customer service."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="branding">
+          <span class="logo">Metro<span>Motors</span></span>
+          <p class="tagline">Certified Pre-Owned Excellence</p>
+        </div>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#inventory">Inventory</a>
+          <a href="#why-us">Why Metro</a>
+          <a href="#financing">Financing</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#contact" class="button">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="container">
+          <div class="hero-copy">
+            <h1>Drive Home a Certified Used Car You Can Trust</h1>
+            <p>
+              Every vehicle at Metro Motors is hand-selected, multi-point inspected, and backed by complimentary warranties. Discover flexible financing, personalized buying experiences, and the best value in town.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#inventory">Browse Inventory</a>
+              <a class="button secondary" href="#contact">Schedule a Test Drive</a>
+            </div>
+            <ul class="hero-highlights">
+              <li>150+ vehicles ready for immediate delivery</li>
+              <li>In-house financing &amp; credit specialists</li>
+              <li>Nationwide shipping available</li>
+            </ul>
+          </div>
+          <div class="hero-showcase" aria-hidden="true">
+            <div class="showcase-card">
+              <div class="showcase-price">$22,450</div>
+              <p class="showcase-model">2021 Honda Accord Touring</p>
+              <p class="showcase-details">32,000 miles • 1 Owner • Clean CarFax</p>
+            </div>
+            <div class="showcase-card">
+              <div class="showcase-price">$19,990</div>
+              <p class="showcase-model">2020 Toyota RAV4 XLE</p>
+              <p class="showcase-details">All-Wheel Drive • 28,500 miles</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trusted-partners" aria-label="Partner recognitions">
+        <div class="container">
+          <p class="partners-heading">Certified Partners &amp; Programs</p>
+          <ul class="partner-logos">
+            <li>CarFax Advantage Dealer</li>
+            <li>Kelley Blue Book Instant Cash Offer</li>
+            <li>NAPA AutoCare Center</li>
+            <li>Capital One Auto Navigator</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="inventory" id="inventory" aria-labelledby="inventory-heading">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="inventory-heading">Featured Inventory</h2>
+            <p>Hand-picked vehicles ready for your driveway today.</p>
+          </div>
+
+          <form class="inventory-filters" aria-label="Filter vehicles">
+            <div class="form-group">
+              <label for="filter-price">Price Range</label>
+              <select id="filter-price" name="price">
+                <option value="all">All</option>
+                <option value="under-15000">Under $15,000</option>
+                <option value="15000-25000">$15,000 – $25,000</option>
+                <option value="25000-35000">$25,000 – $35,000</option>
+                <option value="over-35000">Over $35,000</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="filter-type">Body Style</label>
+              <select id="filter-type" name="type">
+                <option value="all">All</option>
+                <option value="suv">SUV</option>
+                <option value="sedan">Sedan</option>
+                <option value="truck">Truck</option>
+                <option value="coupe">Coupe</option>
+              </select>
+            </div>
+          </form>
+
+          <div class="inventory-grid" id="inventory-grid">
+            <article class="vehicle-card" data-price="21990" data-type="suv">
+              <div class="vehicle-media vehicle-media--rav4" role="img" aria-label="2020 Toyota RAV4 XLE"></div>
+              <div class="vehicle-content">
+                <h3>2020 Toyota RAV4 XLE</h3>
+                <p class="vehicle-price">$21,990</p>
+                <ul class="vehicle-details">
+                  <li>28,500 miles</li>
+                  <li>All-Wheel Drive</li>
+                  <li>Apple CarPlay &amp; Android Auto</li>
+                </ul>
+                <a class="button" href="#contact">Reserve Vehicle</a>
+              </div>
+            </article>
+
+            <article class="vehicle-card" data-price="16950" data-type="sedan">
+              <div class="vehicle-media vehicle-media--civic" role="img" aria-label="2019 Honda Civic EX"></div>
+              <div class="vehicle-content">
+                <h3>2019 Honda Civic EX</h3>
+                <p class="vehicle-price">$16,950</p>
+                <ul class="vehicle-details">
+                  <li>35,200 miles</li>
+                  <li>Honda Sensing Safety Suite</li>
+                  <li>Remote start &amp; heated seats</li>
+                </ul>
+                <a class="button" href="#contact">Reserve Vehicle</a>
+              </div>
+            </article>
+
+            <article class="vehicle-card" data-price="32990" data-type="truck">
+              <div class="vehicle-media vehicle-media--f150" role="img" aria-label="2021 Ford F-150 Lariat"></div>
+              <div class="vehicle-content">
+                <h3>2021 Ford F-150 Lariat</h3>
+                <p class="vehicle-price">$32,990</p>
+                <ul class="vehicle-details">
+                  <li>27,100 miles</li>
+                  <li>EcoBoost V6 • 4x4</li>
+                  <li>FX4 Off-Road Package</li>
+                </ul>
+                <a class="button" href="#contact">Reserve Vehicle</a>
+              </div>
+            </article>
+
+            <article class="vehicle-card" data-price="13995" data-type="suv">
+              <div class="vehicle-media vehicle-media--crv" role="img" aria-label="2018 Honda CR-V Touring"></div>
+              <div class="vehicle-content">
+                <h3>2018 Honda CR-V Touring</h3>
+                <p class="vehicle-price">$13,995</p>
+                <ul class="vehicle-details">
+                  <li>52,400 miles</li>
+                  <li>Hands-free power liftgate</li>
+                  <li>Adaptive cruise control</li>
+                </ul>
+                <a class="button" href="#contact">Reserve Vehicle</a>
+              </div>
+            </article>
+
+            <article class="vehicle-card" data-price="27990" data-type="coupe">
+              <div class="vehicle-media vehicle-media--mustang" role="img" aria-label="2022 Ford Mustang GT Premium"></div>
+              <div class="vehicle-content">
+                <h3>2022 Ford Mustang GT Premium</h3>
+                <p class="vehicle-price">$27,990</p>
+                <ul class="vehicle-details">
+                  <li>18,300 miles</li>
+                  <li>5.0L V8 • Performance Pack</li>
+                  <li>Active exhaust &amp; digital cluster</li>
+                </ul>
+                <a class="button" href="#contact">Reserve Vehicle</a>
+              </div>
+            </article>
+
+            <article class="vehicle-card" data-price="18950" data-type="sedan">
+              <div class="vehicle-media vehicle-media--camry" role="img" aria-label="2020 Toyota Camry SE"></div>
+              <div class="vehicle-content">
+                <h3>2020 Toyota Camry SE</h3>
+                <p class="vehicle-price">$18,950</p>
+                <ul class="vehicle-details">
+                  <li>31,900 miles</li>
+                  <li>Toyota Safety Sense 2.5</li>
+                  <li>Sport-tuned suspension</li>
+                </ul>
+                <a class="button" href="#contact">Reserve Vehicle</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-us" id="why-us" aria-labelledby="why-us-heading">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="why-us-heading">Why Buy from Metro Motors?</h2>
+            <p>We combine transparency, technology, and a passion for cars to deliver an experience unlike any other dealership.</p>
+          </div>
+          <div class="why-grid">
+            <article>
+              <h3>Reconditioning That Goes Further</h3>
+              <p>
+                Each vehicle receives a 172-point mechanical and cosmetic inspection performed by ASE-certified technicians. We provide digital inspection reports and service records with every purchase.
+              </p>
+            </article>
+            <article>
+              <h3>Transparent Pricing</h3>
+              <p>
+                No hidden fees or last-minute surprises. Every price includes a complimentary 3-month powertrain warranty and free home delivery within 100 miles.
+              </p>
+            </article>
+            <article>
+              <h3>Personalized Experience</h3>
+              <p>
+                From virtual walk-arounds to remote signing, our concierge team fits the buying process to your schedule. We're here long after the sale to keep you on the road.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="financing" id="financing" aria-labelledby="financing-heading">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="financing-heading">Financing Made Simple</h2>
+            <p>Apply online in minutes and receive pre-approvals from 20+ lending partners.</p>
+          </div>
+          <div class="financing-grid">
+            <div class="financing-card">
+              <h3>Get Pre-Approved</h3>
+              <p>
+                Submit our secure digital credit application and receive personalized payment options without affecting your credit score.
+              </p>
+            </div>
+            <div class="financing-card">
+              <h3>Value Your Trade</h3>
+              <p>
+                Use our Kelley Blue Book Instant Cash Offer tool and get a same-day appraisal whether you buy from us or not.
+              </p>
+            </div>
+            <div class="financing-card">
+              <h3>Protection Plans</h3>
+              <p>
+                Choose from extended service contracts, GAP coverage, and tire &amp; wheel protection backed by top-rated insurers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="testimonials-heading">Drivers Love Metro Motors</h2>
+            <p>Read what recent buyers are saying about their experience.</p>
+          </div>
+          <div class="testimonial-grid">
+            <figure class="testimonial">
+              <blockquote>
+                “The team at Metro Motors made buying my SUV effortless. They delivered it to my driveway with a full tank and fresh detail. I’ve already sent two friends their way!”
+              </blockquote>
+              <figcaption>— Alicia P., Denver CO</figcaption>
+            </figure>
+            <figure class="testimonial">
+              <blockquote>
+                “Incredible transparency. I loved seeing the full inspection report and the financing options upfront. The whole process was quick and stress-free.”
+              </blockquote>
+              <figcaption>— Mark R., Aurora CO</figcaption>
+            </figure>
+            <figure class="testimonial">
+              <blockquote>
+                “The best trade-in value I found anywhere and they handled all the paperwork. I’m thrilled with my certified Accord from Metro Motors.”
+              </blockquote>
+              <figcaption>— Priya K., Lakewood CO</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-banner" aria-labelledby="cta-banner-heading">
+        <div class="container">
+          <h2 id="cta-banner-heading">Ready to Find Your Next Ride?</h2>
+          <p>
+            Browse our full inventory online, get a personalized video walk-through, or visit our showroom today.
+          </p>
+          <div class="cta-actions">
+            <a class="button" href="#contact">Book an Appointment</a>
+            <a class="button secondary" href="tel:3035550148">Call (303) 555-0148</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+          <div class="contact-wrapper">
+            <div class="contact-info">
+              <div class="section-heading">
+                <h2 id="contact-heading">Visit Metro Motors</h2>
+                <p>Your trusted used car dealership in the heart of downtown Denver.</p>
+              </div>
+              <dl class="info-list">
+                <div>
+                  <dt>Showroom</dt>
+                  <dd>1250 Blake Street, Denver, CO 80202</dd>
+                </div>
+                <div>
+                  <dt>Hours</dt>
+                  <dd>
+                    Mon–Fri: 9:00 AM – 7:00 PM<br />
+                    Saturday: 9:00 AM – 6:00 PM<br />
+                    Sunday: By appointment only
+                  </dd>
+                </div>
+                <div>
+                  <dt>Call or Text</dt>
+                  <dd><a href="tel:3035550148">(303) 555-0148</a></dd>
+                </div>
+                <div>
+                  <dt>Email</dt>
+                  <dd><a href="mailto:sales@metromotors.com">sales@metromotors.com</a></dd>
+                </div>
+              </dl>
+            </div>
+            <form class="contact-form" aria-label="Schedule a test drive">
+              <h3>Schedule a Test Drive</h3>
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Driver" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+              <div class="form-field">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(303) 555-0148" required />
+              </div>
+              <div class="form-field">
+                <label for="vehicle">Interested Vehicle</label>
+                <input type="text" id="vehicle" name="vehicle" placeholder="2020 Toyota RAV4 XLE" />
+              </div>
+              <div class="form-field">
+                <label for="message">Preferred Date &amp; Time</label>
+                <textarea id="message" name="message" rows="3" placeholder="This Saturday morning works best for me."></textarea>
+              </div>
+              <button type="submit" class="button">Submit Request</button>
+              <p class="form-disclaimer">Our team will confirm your appointment within one business hour.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="current-year"></span> Metro Motors. All rights reserved.</p>
+        <nav aria-label="Footer">
+          <a href="#hero">Home</a>
+          <a href="#inventory">Inventory</a>
+          <a href="#financing">Financing</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>
