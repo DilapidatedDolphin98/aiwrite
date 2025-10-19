@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prestige Auto Demo | Inventory</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="branding">
+        <a href="index.html" class="logo">Prestige Auto Demo</a>
+        <p class="tagline">Showcasing boutique automotive services</p>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="inventory.html" class="active">Inventory</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Available Vehicles</h1>
+        <p>Manage the sample inventory below or add new listings to showcase your dealership.</p>
+      </div>
+    </section>
+
+    <section class="inventory container">
+      <div class="inventory-toolbar">
+        <div class="status-legend">
+          <span class="status-dot available"></span> Available
+          <span class="status-dot sold"></span> Sold
+        </div>
+        <button id="reset-demo" class="btn btn-secondary" type="button">Reset demo data</button>
+      </div>
+      <div id="inventory-grid" class="inventory-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="admin-panel">
+      <div class="container">
+        <h2>Quick add a vehicle</h2>
+        <p>
+          Use this lightweight form to add vehicles to the inventory without leaving the page. All
+          updates stay in your browser for the demo.
+        </p>
+        <form id="add-vehicle-form" class="add-vehicle-form">
+          <div class="form-grid">
+            <label>
+              <span>Year</span>
+              <input type="number" name="year" min="1950" max="2099" required />
+            </label>
+            <label>
+              <span>Make</span>
+              <input type="text" name="make" required />
+            </label>
+            <label>
+              <span>Model</span>
+              <input type="text" name="model" required />
+            </label>
+            <label>
+              <span>Price</span>
+              <input type="text" name="price" placeholder="$35,400" required />
+            </label>
+            <label>
+              <span>Mileage</span>
+              <input type="text" name="mileage" placeholder="12,500 mi" required />
+            </label>
+            <label>
+              <span>Image URL</span>
+              <input type="url" name="image" placeholder="https://" required />
+            </label>
+          </div>
+          <label class="full-width">
+            <span>Description</span>
+            <textarea name="description" rows="3" required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Add vehicle</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="current-year"></span> Prestige Auto Demo. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="inventory.html" class="active">Inventory</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/common.js"></script>
+  <script src="scripts/inventory.js" type="module"></script>
+</body>
+</html>
