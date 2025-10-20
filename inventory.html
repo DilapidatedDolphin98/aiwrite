@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Drivehouse Inventory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html">Drivehouse</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html#services">Services</a>
+          <a href="index.html#testimonials">Testimonials</a>
+          <a href="index.html#contact">Concierge</a>
+          <a class="button button--ghost" href="admin.html">Dealer sign-in</a>
+        </nav>
+        <button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu">☰</button>
+        <aside class="mobile-menu" id="mobile-menu" data-mobile-menu>
+          <nav aria-label="Mobile">
+            <a href="index.html#services">Services</a>
+            <a href="index.html#testimonials">Testimonials</a>
+            <a href="index.html#contact">Concierge</a>
+            <a href="admin.html">Dealer sign-in</a>
+          </nav>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container inventory-page">
+          <aside class="filter-panel">
+            <h2>Refine results</h2>
+            <p class="filter-hint">Precision filters make it effortless to curate your shortlist.</p>
+            <div class="filter-group">
+              <label>
+                Search
+                <input type="search" id="searchFilter" placeholder="Make, model, color..." />
+              </label>
+            </div>
+            <div class="filter-group">
+              <label>
+                Make
+                <select id="makeFilter"></select>
+              </label>
+              <label>
+                Body style
+                <select id="bodyFilter"></select>
+              </label>
+              <label>
+                Fuel type
+                <select id="fuelFilter"></select>
+              </label>
+            </div>
+            <div class="filter-group">
+              <label>
+                Minimum price
+                <input type="number" id="minPrice" placeholder="e.g. 30000" min="0" step="1000" />
+              </label>
+              <label>
+                Maximum price
+                <input type="number" id="maxPrice" placeholder="e.g. 90000" min="0" step="1000" />
+              </label>
+              <label>
+                Maximum mileage
+                <input type="number" id="maxMileage" placeholder="e.g. 25000" min="0" step="500" />
+              </label>
+            </div>
+            <button class="button button--ghost" type="button" data-clear-filters>Clear filters</button>
+            <div data-active-filters></div>
+          </aside>
+
+          <div class="inventory-content">
+            <header class="inventory-toolbar">
+              <div>
+                <h1 class="section-title">Available vehicles</h1>
+                <p class="section-subtitle" data-inventory-count>Inventory loads with rich filters for every shopper.</p>
+              </div>
+              <div class="filter-actions">
+                <label>
+                  Sort by
+                  <select id="sortBy">
+                    <option value="recommended">Recommended</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="mileage">Mileage: Low to High</option>
+                    <option value="newest">Newest model year</option>
+                  </select>
+                </label>
+                <div class="view-toggle" role="group" aria-label="Toggle inventory layout">
+                  <button type="button" class="is-active" data-view="grid">Grid</button>
+                  <button type="button" data-view="list">List</button>
+                </div>
+              </div>
+            </header>
+            <div class="inventory-grid" data-layout="grid" data-inventory-grid></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div>Looking for something specific? <a href="index.html#contact">Contact our concierge</a>.</div>
+        <div>
+          <a href="index.html">Return home</a> ·
+          <a href="admin.html">Dealer sign-in</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/common.js" defer></script>
+    <script src="scripts/inventory.js" defer></script>
+  </body>
+</html>
