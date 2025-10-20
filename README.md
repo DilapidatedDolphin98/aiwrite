@@ -1,29 +1,16 @@
-# Drivehouse showcase
+# Prestige Auto Demo
 
-A polished, front-end-only dealership experience that showcases an inventory of luxury vehicles with concierge-level
-branding. It includes:
+A lightweight static dealership demo website with a home page, inventory manager, and contact page.
 
-- A modern landing page with featured vehicles, concierge services, and testimonials.
-- A fully interactive inventory page with search, filtering, sorting, and grid/list view toggles.
-- An owner-only admin console that hides the quick-add form behind a private passphrase and stores custom vehicles in
-  `localStorage` for instant previewing.
+## Features
+
+- Modern responsive layout with reusable navigation and footer
+- Inventory page populated with ten sample vehicles, including photos and descriptions
+- In-browser admin tools to add new vehicles, toggle sold status, and reset the demo data
+- Contact page with business details, embedded Google Map, and inquiry form
 
 ## Getting started
 
-This project is framework-free—just open the HTML files in a browser:
-
-```bash
-# from the repository root
-python -m http.server 8000
-# visit http://localhost:8000/index.html
-```
-
-The same approach works with any static file server.
-
-## Owner console
-
-Open `admin.html` to access the owner console. The default passphrase is defined in `scripts/admin.js` via the
-`ADMIN_PASSWORD` constant. Update that value to something unique so only you can add inventory.
-
-Custom listings are saved to `localStorage`. They display immediately on `inventory.html`, can be removed from the admin
-console, and persist in the browser where you added them.
+Open `index.html` in your preferred browser to explore the demo experience. Inventory changes are
+stored locally in your browser via `localStorage`, so each visitor can experiment without affecting
+anyone else.

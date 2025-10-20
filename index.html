@@ -1,215 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Drivehouse | Curated luxury inventory</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/main.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container site-header__inner">
-        <a class="brand" href="index.html">Drivehouse</a>
-        <nav class="nav-links" aria-label="Primary">
-          <a href="#inventory-preview">Inventory</a>
-          <a href="#services">Services</a>
-          <a href="#testimonials">Testimonials</a>
-          <a href="#contact">Contact</a>
-          <a class="button button--ghost" href="inventory.html">Browse inventory</a>
-        </nav>
-        <button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu">☰</button>
-        <aside class="mobile-menu" id="mobile-menu" data-mobile-menu>
-          <nav aria-label="Mobile">
-            <a href="#inventory-preview">Inventory</a>
-            <a href="#services">Services</a>
-            <a href="#testimonials">Testimonials</a>
-            <a href="#contact">Contact</a>
-            <a href="inventory.html">Browse inventory</a>
-            <a href="admin.html">Dealer sign-in</a>
-          </nav>
-        </aside>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prestige Auto Demo | Home</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="branding">
+        <a href="index.html" class="logo">Prestige Auto Demo</a>
+        <p class="tagline">Showcasing boutique automotive services</p>
       </div>
-    </header>
+      <nav class="site-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero__inner">
-          <div>
-            <h1 class="hero__title">Luxury cars, curated for the way you drive.</h1>
-            <p class="hero__lead">
-              Drivehouse pairs concierge-level service with a data-backed marketplace to help you find vehicles
-              that meet your standards for performance, comfort, and technology.
-            </p>
-            <div class="hero__actions">
-              <a class="button" href="inventory.html">Explore our catalog</a>
-              <a class="button button--ghost" href="#services">How it works</a>
-            </div>
-            <div class="hero__metrics">
-              <div class="metric">
-                <strong>48 hrs</strong>
-                <span>Average vehicle match time</span>
-              </div>
-              <div class="metric">
-                <strong>4.9★</strong>
-                <span>Guest-rated experience</span>
-              </div>
-              <div class="metric">
-                <strong>100%</strong>
-                <span>Inspected & certified</span>
-              </div>
-            </div>
-          </div>
-          <div class="hero__media">
-            <img
-              src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80"
-              alt="Luxury SUV interior"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section id="inventory-preview">
-        <div class="container">
-          <h2 class="section-title">Featured inventory</h2>
-          <p class="section-subtitle">
-            A first look at our most requested vehicles. Each listing includes full inspection reports, service
-            history, and an ownership experience tailored to you.
-          </p>
-          <div class="featured-inventory">
-            <div class="stat-grid" data-market-stats></div>
-            <div data-featured-inventory></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services">
-        <div class="container">
-          <h2 class="section-title">Concierge services</h2>
-          <p class="section-subtitle">
-            From discovery to delivery, our team manages each step of the journey so you can focus on the thrill of
-            the drive.
-          </p>
-          <div class="features-grid">
-            <article class="feature-card">
-              <div class="feature-icon">🔍</div>
-              <h3>Personalized discovery</h3>
-              <p>
-                Sit down with our specialists to define your wishlist. We track trends, incentives, and auction data
-                to surface the best options before they hit the market.
-              </p>
-            </article>
-            <article class="feature-card">
-              <div class="feature-icon">🛡️</div>
-              <h3>Certified inspection</h3>
-              <p>
-                Every vehicle is inspected by ASE-certified partners with a 150-point checklist covering mechanical
-                health, tech systems, and detailed cosmetic reporting.
-              </p>
-            </article>
-            <article class="feature-card">
-              <div class="feature-icon">🚚</div>
-              <h3>White-glove delivery</h3>
-              <p>
-                Experience seamless paperwork, enclosed transport, and a personal delivery specialist who walks you
-                through every feature the moment it arrives.
-              </p>
-            </article>
-            <article class="feature-card">
-              <div class="feature-icon">📊</div>
-              <h3>Ownership concierge</h3>
-              <p>
-                We schedule maintenance, manage detailing, and keep you updated on resale value so your investment
-                performs on and off the road.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="testimonials">
-        <div class="container">
-          <h2 class="section-title">Trusted by drivers nationwide</h2>
-          <p class="section-subtitle">
-            Our clients choose Drivehouse for transparent pricing, responsive communication, and curated selections
-            that feel truly personal.
-          </p>
-          <div class="testimonials">
-            <article class="testimonial-card">
-              <p>
-                “Drivehouse found the exact GT model I was searching for—complete with service records—within a week.
-                They handled shipping, financing, even a custom delivery unveiling.”
-              </p>
-              <strong>Amelia R. · Seattle, WA</strong>
-            </article>
-            <article class="testimonial-card">
-              <p>
-                “The inspection report they provided was more comprehensive than anything I’ve seen from a dealership.
-                No surprises, just a flawless buying experience.”
-              </p>
-              <strong>Jordan K. · Austin, TX</strong>
-            </article>
-            <article class="testimonial-card">
-              <p>
-                “I manage a collection and their concierge program is unmatched. They handle everything—from detailing
-                to seasonal storage—with meticulous care.”
-              </p>
-              <strong>Priya S. · Miami, FL</strong>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contact-section">
-        <div class="container">
-          <div class="featured-inventory">
-            <h2 class="section-title">Let’s build your shortlist</h2>
-            <p class="section-subtitle">
-              Share the models you’re considering and our concierge will reach out within one business day with
-              availability, incentives, and a personalized preview drive plan.
-            </p>
-            <form>
-              <label>
-                Name
-                <input type="text" name="name" placeholder="Your name" required />
-              </label>
-              <label>
-                Email
-                <input type="email" name="email" placeholder="you@example.com" required />
-              </label>
-              <label>
-                Desired vehicles
-                <textarea name="vehicles" placeholder="Tell us about your must-have features"></textarea>
-              </label>
-              <button class="button" type="submit">Request concierge call</button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container site-footer__inner">
-        <div>© <span id="currentYear"></span> Drivehouse Automotive Concierge</div>
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
         <div>
-          <a href="inventory.html">View inventory</a> ·
-          <a href="admin.html">Dealer sign-in</a>
+          <h1>Modern car buying made personal</h1>
+          <p>
+            Prestige Auto Demo is the perfect starting point for your dealership portfolio. Highlight
+            curated inventory, bespoke services, and provide clients with a seamless way to get in
+            touch—all in one polished template.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="inventory.html">Browse Inventory</a>
+            <a class="btn btn-secondary" href="contact.html">Schedule a Consultation</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Why clients choose us</h2>
+          <ul>
+            <li>Hand-selected vehicles inspected by certified technicians</li>
+            <li>Concierge trade-in and sourcing services for any lifestyle</li>
+            <li>Transparent pricing with digital paperwork options</li>
+          </ul>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <button class="back-to-top" data-back-to-top hidden aria-label="Back to top">↑</button>
+    <section class="services">
+      <div class="container">
+        <h2>Signature services</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Vehicle Sourcing</h3>
+            <p>
+              Tell us what you are looking for and we will locate the perfect match using our dealer
+              network, auctions, and private collections.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Financing Guidance</h3>
+            <p>
+              Partner with our finance concierge to explore flexible payment plans, warranties, and
+              protection packages tailored to you.
+            </p>
+          </article>
+          <article class="card">
+            <h3>White-Glove Delivery</h3>
+            <p>
+              Enjoy door-to-door delivery and a personalized walkthrough so you can drive with
+              confidence from day one.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <script>
-      document.getElementById("currentYear").textContent = new Date().getFullYear();
-    </script>
-    <script src="scripts/data.js"></script>
-    <script src="scripts/common.js" defer></script>
-    <script src="scripts/home.js" defer></script>
-  </body>
+    <section class="cta">
+      <div class="container cta-content">
+        <div>
+          <h2>Ready to elevate your dealership?</h2>
+          <p>
+            Use this demo to win new clients. Keep the inventory fresh with the built-in admin tools,
+            share your story, and make it easy for shoppers to reach you.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="inventory.html">See Available Cars</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="current-year"></span> Prestige Auto Demo. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="inventory.html">Inventory</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/common.js"></script>
+</body>
 </html>
