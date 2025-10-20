@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Drivehouse Dealer Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html">Drivehouse</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html#inventory-preview">Featured</a>
+          <a href="inventory.html">Inventory</a>
+          <a href="index.html#contact">Concierge</a>
+        </nav>
+        <button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu">☰</button>
+        <aside class="mobile-menu" id="mobile-menu" data-mobile-menu>
+          <nav aria-label="Mobile">
+            <a href="index.html#inventory-preview">Featured</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="index.html#contact">Concierge</a>
+          </nav>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="admin-layout container">
+          <section class="admin-card" data-admin-login>
+            <h1>Owner access</h1>
+            <p>
+              This console is just for you. Use the private passphrase to unlock the quick-add tools and manage custom
+              listings visible in the public inventory.
+            </p>
+            <form id="adminLoginForm">
+              <label>
+                Passphrase
+                <input type="password" name="password" placeholder="Enter admin password" required />
+              </label>
+              <button class="button" type="submit">Unlock console</button>
+            </form>
+            <p class="filter-hint">
+              Change the password by updating <code>ADMIN_PASSWORD</code> in <code>scripts/admin.js</code>.
+            </p>
+            <div class="admin-feedback" data-login-feedback hidden></div>
+          </section>
+
+          <section class="admin-card" data-admin-dashboard hidden>
+            <header>
+              <h2>Quick add inventory</h2>
+              <p class="filter-hint">
+                Listings added here appear immediately on the inventory page in your browser. Use this while you finalize
+                integrations with your full back office system.
+              </p>
+            </header>
+            <form id="quickAddForm">
+              <div class="form-grid">
+                <label>
+                  Make
+                  <input type="text" name="make" placeholder="Aurora" required />
+                </label>
+                <label>
+                  Model
+                  <input type="text" name="model" placeholder="GT" required />
+                </label>
+                <label>
+                  Model year
+                  <input type="number" name="year" placeholder="2024" min="1980" max="2099" />
+                </label>
+                <label>
+                  Asking price
+                  <input type="number" name="price" placeholder="68900" min="0" step="500" required />
+                </label>
+                <label>
+                  Mileage
+                  <input type="number" name="mileage" placeholder="8500" min="0" step="100" />
+                </label>
+                <label>
+                  Body style
+                  <input type="text" name="bodyType" placeholder="Coupe" />
+                </label>
+                <label>
+                  Fuel type
+                  <input type="text" name="fuel" placeholder="Hybrid" />
+                </label>
+                <label>
+                  Transmission
+                  <input type="text" name="transmission" placeholder="Automatic" />
+                </label>
+                <label>
+                  Location
+                  <input type="text" name="location" placeholder="San Francisco, CA" />
+                </label>
+                <label>
+                  Exterior color
+                  <input type="text" name="color" placeholder="Obsidian Black" />
+                </label>
+                <label>
+                  Image URL
+                  <input type="url" name="image" placeholder="https://..." />
+                </label>
+                <label>
+                  Feature highlights
+                  <input type="text" name="highlights" placeholder="Comma separated list" />
+                </label>
+              </div>
+              <div class="filter-actions">
+                <button class="button" type="submit">Add to inventory</button>
+                <button class="button button--ghost" type="button" data-logout>Sign out</button>
+              </div>
+            </form>
+            <div class="admin-feedback" data-quick-add-feedback hidden></div>
+
+            <section>
+              <h3>Custom listings</h3>
+              <p class="filter-hint">
+                These entries live only in your browser storage for now. Remove them anytime or wire them into your
+                production CMS later.
+              </p>
+              <ul class="admin-inventory__list" data-admin-inventory></ul>
+            </section>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div>Need a different workflow? Contact support@drivehouse.example</div>
+        <div>
+          <a href="index.html">Return home</a> ·
+          <a href="inventory.html">View inventory</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/common.js" defer></script>
+    <script src="scripts/admin.js" defer></script>
+  </body>
+</html>
