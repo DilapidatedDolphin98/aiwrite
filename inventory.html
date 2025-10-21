@@ -28,7 +28,10 @@
     <section class="page-header">
       <div class="container">
         <h1>Available Vehicles</h1>
-        <p>Manage the sample inventory below or add new listings to showcase your dealership.</p>
+        <p>
+          Manage the sample inventory below or add new listings to showcase your dealership. Click any vehicle to open
+          a full detail page with scrollable photography and specs.
+        </p>
       </div>
     </section>
 
@@ -73,13 +76,46 @@
               <input type="text" name="mileage" placeholder="12,500 mi" required />
             </label>
             <label>
-              <span>Image URL</span>
+              <span>Body style</span>
+              <input type="text" name="bodyType" placeholder="SUV" />
+            </label>
+            <label>
+              <span>Fuel type</span>
+              <input type="text" name="fuel" placeholder="Hybrid" />
+            </label>
+            <label>
+              <span>Transmission</span>
+              <input type="text" name="transmission" placeholder="Automatic" />
+            </label>
+            <label>
+              <span>Location</span>
+              <input type="text" name="location" placeholder="San Francisco, CA" />
+            </label>
+            <label>
+              <span>Exterior color</span>
+              <input type="text" name="color" placeholder="Onyx Black" />
+            </label>
+            <label class="full-width">
+              <span>Thumbnail image URL</span>
               <input type="url" name="image" placeholder="https://" required />
             </label>
           </div>
           <label class="full-width">
             <span>Description</span>
             <textarea name="description" rows="3" required></textarea>
+          </label>
+          <label class="full-width">
+            <span>Feature highlights</span>
+            <input type="text" name="highlights" placeholder="Comma, newline, or semicolon separated list" />
+          </label>
+          <label class="full-width">
+            <span>Additional photo URLs</span>
+            <textarea
+              name="gallery"
+              rows="3"
+              placeholder="Paste one photo URL per line. These appear on the detail page gallery."
+            ></textarea>
+            <span class="input-hint">The first photo is used as the thumbnail in the inventory grid.</span>
           </label>
           <button class="btn btn-primary" type="submit">Add vehicle</button>
         </form>

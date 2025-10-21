@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle detail | Prestige Auto Demo</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="branding">
+          <a href="index.html" class="logo">Prestige Auto Demo</a>
+          <p class="tagline">Showcasing boutique automotive services</p>
+        </div>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="inventory.html">Inventory</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="vehicle-page">
+      <section class="vehicle-hero">
+        <div class="container">
+          <div class="vehicle-hero__layout" data-vehicle-detail hidden>
+            <div class="vehicle-gallery">
+              <figure class="vehicle-gallery__main">
+                <img data-gallery-main alt="Selected vehicle" />
+              </figure>
+              <div class="vehicle-gallery__strip" data-gallery-strip aria-label="Vehicle gallery" role="list"></div>
+            </div>
+            <aside class="vehicle-summary">
+              <p class="vehicle-status" data-vehicle-status></p>
+              <h1 data-vehicle-title></h1>
+              <p class="vehicle-price" data-vehicle-price></p>
+              <p class="vehicle-meta" data-vehicle-meta></p>
+              <dl class="vehicle-specs" data-vehicle-specs></dl>
+              <section class="vehicle-highlights">
+                <h2>Highlights</h2>
+                <ul data-vehicle-highlights></ul>
+              </section>
+              <p class="vehicle-description" data-vehicle-description></p>
+              <div class="vehicle-actions">
+                <a class="btn btn-secondary" href="inventory.html">Back to inventory</a>
+              </div>
+            </aside>
+          </div>
+          <div class="vehicle-empty" data-vehicle-empty hidden>
+            <h1>Vehicle not found</h1>
+            <p>
+              We couldn’t find a listing with that reference. It may have been removed or sold. Return to the
+              <a href="inventory.html">inventory page</a> to browse current vehicles.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>&copy; <span id="current-year"></span> Prestige Auto Demo. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="inventory.html">Inventory</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/common.js"></script>
+    <script type="module" src="scripts/vehicle-detail.js"></script>
+  </body>
+</html>
