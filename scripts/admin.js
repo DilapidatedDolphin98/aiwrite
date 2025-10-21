@@ -119,6 +119,23 @@
       return;
     }
 
+    const primaryImage = payload.image ||
+      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80";
+    const galleryEntries = payload.gallery
+      ? payload.gallery
+          .split(/\n|,|;/)
+          .map((item) => item.trim())
+          .filter(Boolean)
+      : [];
+    const gallery = Array.from(new Set([primaryImage, ...galleryEntries]));
+
+    const highlights = payload.highlights
+      ? payload.highlights
+          .split(",")
+          .map((item) => item.trim())
+          .filter(Boolean)
+      : ["New arrival"];
+
     const newVehicle = {
       id: `${payload.make}-${payload.model}-${Date.now()}`.toLowerCase().replace(/\s+/g, "-"),
       make: payload.make.trim(),
@@ -131,13 +148,9 @@
       transmission: payload.transmission.trim() || "Automatic",
       location: payload.location.trim() || "",
       color: payload.color.trim() || "",
-      image: payload.image || "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80",
-      highlights: payload.highlights
-        ? payload.highlights
-            .split(",")
-            .map((item) => item.trim())
-            .filter(Boolean)
-        : ["New arrival"],
+      image: primaryImage,
+      gallery,
+      highlights,
     };
 
     const current = window.getCustomInventory ? window.getCustomInventory() : [];
